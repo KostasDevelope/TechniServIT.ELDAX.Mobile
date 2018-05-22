@@ -218,18 +218,35 @@ export const config = {
           getUniversalLookupByIdUrl: "api/universallookupoperations/getuniversallookupbyid/{parentuniversallookupid}",
           getDocumentPropertyValueUrl: "api/universallookupoperations/getdocumentpropertyvalue/{documentPropertyDefinitionId}/{universalLookupId}",
 
+          getUserGroupsUrl: "api/usergroupoperations/getusergroups",
+          getUserGroupsToSelectUrl: "api/usergroupoperations/getusergroupstoselect",
+          getUserGroupsByStorageIdUrl: "api/usergroupoperations/getusergroupsbystorageid/{storageId}",
+          createOrUpdateUserGroupUrl: "api/usergroupoperations/createorupdateusergroup",
+          getUserGroupByIdUrl: "api/usergroupoperations/getusergroupbyid/{userGroupId}",
+          deleteUserGroupUrl: "api/usergroupoperations/deleteusergroup/{userGroupId}",
+          GetUsersByUserGroupUrl: "api/usergroupoperations/getusersbyusergroup/{userGroupId}",
 
-
-
-
-
-
-
-
-
-
-
-
-
+          authenticateexUrl: "api/useroperations/authenticateex",
+          isAuthenticatedUrl: "api/useroperations/isauthenticated",
+          userLogoutUrl: "api/useroperations/userlogout",
+          registerUserUrl: "api/useroperations/registeruser",
+          getUsersUrl: "api/useroperations/getusers",
+          createOrUpdateUserUrl: "api/useroperations/createorupdateuser",
+          getUserByIdUrl: "api/useroperations/getuserbyid/{userId}",
+          getUserByLoginUrl: "api/useroperations/getuserbylogin/{loginName}",
+          getUserByIdIncludeUserGroupsIdsUrl: "api/useroperations/getuserbyidincludeusergroupsids/{userId}",
+          deleteUserUrl: "api/useroperations/deleteuser/{userId}",
+          changePasswordUrl: "api/useroperations/changepassword",
+          changePasswordByLoginUrl: "api/useroperations/changepasswordbylogin",
+          checkIfUserExistsByEmailUrl: "api/useroperations/checkifuserexistsbyemail/{email}",
+          createUserSimpleInfrastructureByEmailUrl: "api/useroperations/createusersimpleinfrastructurebyemail",
+          sendNewPINUrl: "api/useroperations/sendnewpin",
+          checkStrengthUrl: "api/useroperations/checkstrength/{password}",
+          getPolicyTypeUrl: "api/useroperations/getpolicytype",
+          isUserSupervisorUrl: "api/useroperations/isusersupervisor",
+          isUserHasEditationUserRightsUrl: "api/useroperations/isuserhaseditationuserrights",
+          isUserSupervisorNoGroupUrl: "api/useroperations/isusersupervisornogroup",
+          unlockUserUrl: "api/useroperations/unlockuser",
+          setNewPasswordSendByEmailUrl: "api/useroperations/setnewpasswordsendbyemail"
         }
 }
