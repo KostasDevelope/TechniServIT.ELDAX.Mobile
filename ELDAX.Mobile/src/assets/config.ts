@@ -1,6 +1,8 @@
 export const config = {
      baseUrl: "http://localhost:3800/",
      urls: {
+          getClientVersion: "api/getclientversion",
+
           authenticateExUrl: "api/account/authenticate",
           getEntityAuditUrl: "api/audit/getentityaudit/{id}",
           getDocumentAuditsUrl: "api/audit/getdocumentaudits",
@@ -87,16 +89,147 @@ export const config = {
           getDefaultCertificateInfoUrl: "api/documentoperations/getdefaultcertificateinfo",
           getDefaultCertificateInfoContentUrl: "api/documentoperations/getdefaultcertificateinfocontent",
           getDocumentPropertyDefinitionsUrl: "api/documentpropertydefinitionoperations/getdocumentpropertydefinitions/{documentStorageId}/{documentClassId}/{assigned}",
-          assignDocumentPropertyDefinitionStorageToDocumentClass: "api/documentpropertydefinitionoperations/assigndocumentpropertydefinitionstoragetodocumentClass",
-          createOrUpdateDocumentPropertyDefinition: "api/documentpropertydefinitionoperations/createorupdatedocumentpropertydefinition",
-          getDocumentPropertyDefinitionById: "api/documentpropertydefinitionoperations/getdocumentpropertydefinitionbyid/{documentPropertyDefinitionId}",
-          deleteDocumentPropertyDefinition: "api/documentpropertydefinitionoperations/deletedocumentpropertydefinition",
-          setDocumentProperty: "api/documentpropertyoperations/setdocumentproperty",
-          setDocumentPropertyAndUniversalLookupParamValueId: "api/documentpropertyoperations/setdocumentpropertyanduniversallookupparamvalueid",
-          setDocumentProperties: "api/documentpropertyoperations/setdocumentproperties",
-          getDocumentProperty: "api/documentpropertyoperations/getdocumentproperty/{docId}",
-          getDocumentPropertiesByUniversalLookupId: "api/documentpropertyoperations/getdocumentpropertiesbyuniversalLookupId",
-          getAllInfoControllers: "api/eldaxapiinfo/getallinfocontrollers"
+          assignDocumentPropertyDefinitionStorageToDocumentClassUrl: "api/documentpropertydefinitionoperations/assigndocumentpropertydefinitionstoragetodocumentClass",
+          createOrUpdateDocumentPropertyDefinitionUrl: "api/documentpropertydefinitionoperations/createorupdatedocumentpropertydefinition",
+          getDocumentPropertyDefinitionByIdUrl: "api/documentpropertydefinitionoperations/getdocumentpropertydefinitionbyid/{documentPropertyDefinitionId}",
+          deleteDocumentPropertyDefinitionUrl: "api/documentpropertydefinitionoperations/deletedocumentpropertydefinition",
+          setDocumentPropertyUrl: "api/documentpropertyoperations/setdocumentproperty",
+          setDocumentPropertyAndUniversalLookupParamValueIdUrl: "api/documentpropertyoperations/setdocumentpropertyanduniversallookupparamvalueid",
+          setDocumentPropertiesUrl: "api/documentpropertyoperations/setdocumentproperties",
+          getDocumentPropertyUrl: "api/documentpropertyoperations/getdocumentproperty/{docId}",
+          getDocumentPropertiesByUniversalLookupIdUrl: "api/documentpropertyoperations/getdocumentpropertiesbyuniversalLookupId",
+          getAllInfoControllersUrl: "api/eldaxapiinfo/getallinfocontrollers",
+          sssignDocumentPropertyDefinitionStorageToDocumentClassUrl: "api/documentpropertydefinitionoperations/assigndocumentpropertydefinitionstoragetodocumentClass",
+          
+          sendDocsToDSUrl: "api/isrsoperations/senddocstods",
+          attachMoreDocsToDSUrl: "api/isrsoperations/attachmoredocstods",
+          modificationItemISRSUrl: "api/isrsoperations/modificationitemisrs",
+          deactivationItemISRSUrl: "api/isrsoperations/deactivationitemisrs",
+
+          createPackageUrl: "api/packageoperations/createpackage",
+          getPackageContent: "api/packageoperations/getpackagecontent/{packageId}",
+          checkSignatureInPackageContentUrl: "api/packageoperations/checksignatureinpackagecontent",
+          checkDocumentClassIsForPackageUrl: "api/packageoperations/checkdocumentclassisforpackage/{classId}",
+
+          getAllBOPermissionsUrl: "api/permissionoperations/getallbopermissions",
+          getBOPermissionUrl: "api/permissionoperations/getbopermission/{appViewRight}",
+          getPermissionsUrl: "api/permissionoperations/getpermissions/{storageId}",
+          getApplicationRolesUrl: "api/permissionoperations/getapplicationroles",
+          getPermissionsTemplateUrl: "api/permissionoperations/getpermissionstemplate",
+          createOrUpdatePermissionUrl: "api/permissionoperations/getpermissionbyid/{permissionId}",
+          deletePermissionUrl: "api/permissionoperations/deletepermission/{permissionId}",
+          рasPermissionUrl: "api/permissionoperations/haspermission",
+
+          getPublicationsUrl: "api/publicationoperations/createpublication",
+          getLastPublicationNumberForUserUrl: "api/publicationoperations/getlastpublicationnumberforuser",
+          updatePublicationUrl: "api/publicationoperations/updatepublication",
+          getPublicationByIdUrl: "api/publicationoperations/getpublicationbyid/{publicationId}",
+          deletePublicationUrl: "api/publicationoperations/deletepublication/{publicationId}",
+
+          getShreddingActivationsUrl: "api/shreddingactivationoperations/getshreddingactivations",
+          assignShreddingActivationStorageToDocumentClassUrl: "api/shreddingactivationoperations/assignshreddingactivationstoragetodocumentClass",
+          updateShreddingActivationUrl: "api/shreddingactivationoperations/updateshreddingactivation",
+          createShreddingActivationUrl: "api/shreddingactivationoperations/createshreddingactivation",
+          getShreddingActivationByIdUrl: "api/shreddingactivationoperations/getshreddingactivationbyid/{shreddingActivationId}",
+
+          getShreddingProcessesUrl: "api/shreddingprocessoperations/getshreddingprocesses",
+          getFinishedShreddingProcessesByTimeIntervalUrl: "api/shreddingprocessoperations/getfinishedshreddingprocessesbytimeinterval",
+          getShreddingProcessesByIdUrl: "api/shreddingprocessoperations/getshreddingprocessesbyid/{shreddingProcessId}",
+          getShreddingProcessDocumentsUrl: "api/shreddingprocessoperations/getshreddingprocessdocuments/{shreddingProcessId}",
+
+          getShreddingRulesUrl: "api/shreddingruleoperations/getshreddingrules",
+          getShreddingRuleByIdUrl: "api/shreddingruleoperations/getshreddingrulebyid/{shreddingRuleId}",
+          getShreddingTypesUrl: "api/shreddingtype/getshreddingtypes",
+          searchShreddingTypesUrl: "api/shreddingtype/searchshreddingtypes",
+          getShreddingTypesByDocumentsUrl: "api/shreddingtype/getshreddingtypesbydocuments",
+          getShreddingTypesByStorageIdAndDocumentTypeUrl: "api/shreddingtype/getshreddingtypesbystorageanddocumenttype/{storageId}/{documentType}",
+          createShreddingTypeUrl: "api/shreddingtype/createshreddingtype",
+          ppdateShreddingTypeUrl: "api/shreddingtype/updateshreddingtype",
+          getShreddingTypeByIdUrl: "api/shreddingtype/getshreddingtypebyid/{id}",
+          deleteShreddingTypeUrl: "api/shreddingtype/deleteshreddingtype/{shreddingTypeId}",
+
+          getSignedCertificatesUrl: "api/signcertificateoperations/getsignedcertificates/{storageId}",
+          getSignedCertificatesForDocumentClassUrl: "api/signcertificateoperations/getsignedcertificatesfordocumentslass/{storageId}/{documentClassId}",
+          getSignedCertificateListByDocumentClassUrl: "api/signcertificateoperations/getsignedcertificatelistbydocumentclass/{documentClassId}",
+          createSignedCertificateUrl: "api/signcertificateoperations/createsignedcertificate",
+          updateSignedCertificateUrl: "api/signcertificateoperations/updatesignedcertificate",
+          deleteSignedCertificateUrl: "api/signcertificateoperations/deletesignedcertificate",
+          deleteSignedCertificateFromDocumentClassUrl: "api/signcertificateoperations/deletesignedcertificatefromdocumentclass/{documentClassId}",
+          getSignedCertificateByIdUrl: "api/signcertificateoperations/getsignedcertificatebyid/{signedCertificateId}",
+          getSignedCertificateByDocumentClassIdUrl: "api/signcertificateoperations/getsignedcertificatebydocumentclassid/{documentClassId}",
+          addSignedCertificateToDocumentClassUrl: "api/signcertificateoperations/addsignedcertificatetodocumentclass",
+          checkPermissionsUrl: "api/signcertificateoperations/checkpermissions/{storageId}",
+          getHSMsUrl: "api/signcertificateoperations/gethsms/{storageId}",
+          getHSMSignCertificatesUrl: "api/signcertificateoperations/gethsmsigncertificates",
+
+          saveSIPUrl: "api/sipoperations/savesip",
+          getNsCaseUrl: "api/sipoperations/getnscase/{documentID}",
+          getNsDocumentUrl: "api/sipoperations/getnsdocument/{documentID}",
+
+          getStoragesUrl: "api/storageoperations/getstorages",
+          searchStoragesUrl: "api/storageoperations/searchstorages",
+          createStorageUrl: "api/storageoperations/createstorage",
+          updateStorageUrl: "api/storageoperations/updatestorage",
+          getStorageByIdUrl: "api/storageoperations/getstoragebyid/{storageId}",
+          getStorageByCreditUrl: "api/storageoperations/getstoragebycredit",
+          deleteStorageUrl: "api/storageoperations/deletestorage/{storageId}",
+          getDeleteStorageInfoUrl: "api/storageoperations/getdeletestorageinfo/{storageId}",
+          getStoragesByUserGroupIdUrl: "api/storageoperations/getstoragesbyusergroupid/{usergroupid}",
+
+          isContentConverterAvailableUrl: "api/systemoperations/iscontentconverteravailable/{conversiontype}",
+          convertPDFToPDFAUrl: "api/systemoperations/convertpdftopdfa",
+          getSettingsByCodeUrl: "api/systemoperations/getsettingsbycode/{code}",
+          setSettingUrl: "api/systemoperations/setsetting",
+          createOrUpdateSettingUrl: "api/systemoperations/createorupdatesetting",
+          contactHelpdeskUrl: "api/systemoperations/сontactрelpdesk",
+          isWFServiceRunningUrl: "api/systemoperations/iswfservicerunning",
+          getSettingByCodeUrl: "api/systemoperations/getsettingbycode/{code}",
+          getCreditByStorageIdUrl: "api/systemoperations/getcreditbystorageid/{storageid}",
+          getCreditUrl: "api/systemoperations/getcredit",
+          getCreditInfoByStorageUrl: "api/systemoperations/getcreditinfobystorage/{storageid}",
+          automaticAccountValidityProlongationUrl: "api/systemoperations/automaticaccountvalidityprolongation",
+
+          getDocumentValidationInfoUrl: "api/timestampoperations/getdocumentvalidationinfo/{documentGuid}",
+
+          getTSAsUrl: "api/tsaoperations/gettsas",
+          getTSAByIdUrl: "api/tsaoperations/gettsabyid/{id}",
+          getTSAByClassIdUrl: "api/tsaoperations/gettsabyclassid/{classid}",
+          createOrUpdateTSAUrl: "api/tsaoperations/createorupdatetsa",
+          deleteTSAUrl: "api/tsaoperations/deletetsa/{id}",
+          requestTimeStampByDocumentHashUrl: "api/tsaoperations/requesttimestampbydocumenthash",
+          uploadTSLCertificateUrl: "api/tslcertificatesadministrationoperations/uploadtslcertificate",
+          getCertificateBySubjectKeyIdentificatorUrl: "api/tslcertificatesadministrationoperations/getcertificatebysubjectkeyidentificator/{subjectkeyidentificator}",
+
+          lookupCreateUrl: "api/universallookupoperations/lookupcreate",
+          getLookupByIdUrl: "api/universallookupoperations/getlookupbyid/{lookupId}",
+          updateLookupUrl: "api/universallookupoperations/updatelookup",
+          getAllLookupsUrl: "api/universallookupoperations/getalllookups",
+          deleteLookupUrl: "api/universallookupoperations/deletelookup/{lookupId}",
+          createLookupParamUrl: "api/universallookupoperations/createlookupparam",
+          updateLookupParamUrl: "api/universallookupoperations/updatelookupparam",
+          deleteLookupParamUrl: "api/universallookupoperations/deletelookupparam/{paramId}",
+          createLookupItemUrl: "api/universallookupoperations/createlookupitem",
+          updateLookupItemUrl: "api/universallookupoperations/updatelookupitem",
+          getLookupItemParametersUrl: "api/universallookupoperations/getlookupitemparameters/{lookupItemId}",
+          getAllLookupItemsUrl: "api/universallookupoperations/getalllookupitems/{lookupId}",
+          deleteLookupItemUrl: "api/universallookupoperations/deletelookupitem/{lookupitemid}",
+          getUniversalLookupsByStorageIdUrl: "api/universallookupoperations/getuniversallookupsbystorageId/{storageId}",
+          getUniversalLookupPropertiesByParentUniversalLookupIdUrl: "api/universallookupoperations/getuniversallookuppropertiesbyparentUniversallookupId/{parentuniversallookupId}",
+          getUniversalLookupByIdUrl: "api/universallookupoperations/getuniversallookupbyid/{parentuniversallookupid}",
+          getDocumentPropertyValueUrl: "api/universallookupoperations/getdocumentpropertyvalue/{documentPropertyDefinitionId}/{universalLookupId}",
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
 }
