@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { LocalStorage, LocalDatabase } from '@ngx-pwa/local-storage';
+import { LocalStorage } from '@ngx-pwa/local-storage';
 
 @Injectable()
-export class EldaxLocalStorage {
-  constructor(protected localStorage: LocalStorage) {}
+export class  EldaxLocalStorage {
+  constructor(
+    protected localStorage: LocalStorage
+  ) {}
   
   SetItem(key : string, value: any, callback?: Function) : void {
     this.localStorage.setItem(key, value).subscribe((result) =>{    
