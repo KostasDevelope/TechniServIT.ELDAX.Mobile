@@ -7,7 +7,7 @@ export class  EldaxLocalStorage {
     protected localStorage: LocalStorage
   ) {}
   
-  SetItem(key : string, value: any, callback?: Function) : void {
+  public SetItem(key : string, value: any, callback?: Function) : void {
     this.localStorage.setItem(key, value).subscribe((result) =>{    
       if(callback !== null ) callback(result);
     }, 
@@ -16,7 +16,7 @@ export class  EldaxLocalStorage {
    });
   }
   
-  RemoveItem(key : string, callback?: Function) : void {
+  public RemoveItem(key : string, callback?: Function) : void {
     this.localStorage.removeItem(key).subscribe(() => (result) =>{    
       if(callback !== null ) callback(result);
     }, 
@@ -25,7 +25,7 @@ export class  EldaxLocalStorage {
      });
   }
 
-  Clear(callback?: Function) : void {
+  public Clear(callback?: Function) : void {
     this.localStorage.clear().subscribe(() => (result) =>{    
       if(callback !== null ) callback(result);
     }, 
@@ -34,7 +34,7 @@ export class  EldaxLocalStorage {
      });
   }
 
-  GetItem<T>(key : string, callback?: Function) : void {
+  public GetItem<T>(key : string, callback?: Function) : void {
     this.localStorage.getItem<T>(key).subscribe((result) => {
       if(callback !== null ) callback(result);
     },
