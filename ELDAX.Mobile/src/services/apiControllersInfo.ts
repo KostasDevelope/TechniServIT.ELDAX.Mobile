@@ -15,7 +15,7 @@ export class ApiControllersInfo{
         protected errorHandler: ErrorHandler
     ) {}
     //http://www.damirscorner.com/blog/posts/20170127-Angular2TutorialWithAsyncAndAwait.html
-    async GetClientVersion() : Promise<string>{
+    public async GetClientVersion() : Promise<string>{
         try 
         {
             let url: string = String.Format("{0}{1}",config.baseUrl, config.urls.getClientVersion);
@@ -26,7 +26,7 @@ export class ApiControllersInfo{
               return await "";
         }
     }
-    async GetApiControllersInfo() : Promise<Array<ControllersInfo>>{
+    public async GetApiControllersInfo() : Promise<Array<ControllersInfo>>{
         try 
         {
             let url: string = String.Format("{0}{1}",config.baseUrl, config.urls.getApiControllersInfo);
