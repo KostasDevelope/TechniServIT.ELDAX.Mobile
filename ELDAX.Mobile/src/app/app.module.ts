@@ -14,8 +14,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { DocumentsListPage } from '../pages/documents-list/documents-list';
-
-
+import { LocalStorageModule } from '@ngx-pwa/local-storage';
 @NgModule({
   declarations: [
     MyApp,
@@ -24,10 +23,11 @@ import { DocumentsListPage } from '../pages/documents-list/documents-list';
     ContactPage,
     HomePage,
     TabsPage,
-    DocumentsListPage
+    DocumentsListPage,
   ],
   imports: [
     BrowserModule,
+    LocalStorageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -38,7 +38,8 @@ import { DocumentsListPage } from '../pages/documents-list/documents-list';
     ContactPage,
     HomePage,
     TabsPage,
-    DocumentsListPage
+    DocumentsListPage,
+    
   ],
   providers: [
     StatusBar,

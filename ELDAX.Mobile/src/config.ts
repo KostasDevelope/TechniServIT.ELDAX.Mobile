@@ -1,9 +1,12 @@
 export const config = {
      baseUrl: "http://localhost:3800/",
      urls: {
+//========BaseApi====================================================================       
           getClientVersion: "api/getclientversion",
-
+          getApiControllersInfo: "api/getapicontrollersinfo",
+//========Account==============================================================
           authenticateExUrl: "api/account/authenticate",
+//========Audit==============================================================
           getEntityAuditUrl: "api/audit/getentityaudit/{id}",
           getDocumentAuditsUrl: "api/audit/getdocumentaudits",
           getEntityAuditsUr: "api/audit/getentityaudits",
@@ -11,18 +14,22 @@ export const config = {
           getLoginAuditsUrl: "api/audit/getloginaudits",
           exportLoggingToCSVUrl: "api/audit/exporttocsv",
           getDemandDefinedLogStatusUrl: "api/audit/getdemanddefinedlogstatus",
+//========Authenticationmethodoperations====================================================================
           getAuthenticationMethodsUrl: "api/authenticationmethodoperations/getauthenticationmethods",
           getAuthenticationMethodByIdUrl: "api/authenticationmethodoperations/getauthenticationmethodbyid/{id}",
           getAuthenticationMethodByCodeUrl: "api/authenticationmethodoperations/getauthenticationmethodbycode/{code}",
+//========Chartsoperations======================================================================================================
           getClassesDocumentChartDataUrl: "api/chartsoperations/getclassesdocumentchartdata",
           getClassesDocumentGridDataUrl: "api/chartsoperations/getclassesdocumentgriddata",
           getPeriodDocumentBarChartDataUrl: "api/chartsoperations/getperioddocumentbarchartdata",
           getTariffInfoUrl: "api/chartsoperations/gettariffinfo",
+//========Documentarchiving=====================================================================================================
           setStorageArchiveDemandStatusUrl: "api/documentarchiving/setstoragearchivedemandstatus",
           deleteStorageArchivesUrl: "api/documentarchiving/deletestoragearchives",
           storageArchivingUrl: "api/documentarchiving/storagearchiving",
           getStorageArchivesUrl: "api/documentarchiving/getstoragearchives/{storageId}",
           getStorageArchiveUrl: "api/documentarchiving/getstoragearchive/{storagearchivedemandid}/{archiveid}",
+//========Documentclassoperations======================================================================================================
           getDocumentClassesUrl: "api/documentclassoperations/getdocumentclasse/{storageId}",
           searchDocumentClassesUrl: "api/documentclassoperations/searchdocumentclasses",
           getTargetDocumentClassesUrl: "api/documentclassoperations/gettargetdocumentclasses/{storageId}/{sourceDocumentClassId}",
@@ -42,6 +49,7 @@ export const config = {
           getDocumentTypesUrl: "api/documentclassoperations/getdocumenttypes/{storageId}",
           getDataBoxByDocumentClassIdUrl: "api/documentclassoperations/getdataboxbydocumentclassid/{documentClassId}",
           createOrUpdateDataBoxUrl: "api/documentclassoperations/createorupdatedatabox",
+//========Documentoperations======================================================================================
           getDocumentResearchRoomOutputUrl: "api/documentoperations/getdocumentresearchroomoutput/{documentGuid}",
           saveDocumentResearchRoomOutputUrl: "api/documentoperations/savedocumentresearchroomoutput",
           getDocumentQurantineResultUrl: "api/documentoperations/getdocumentqurantineresult/{documentGuid}",
@@ -88,29 +96,33 @@ export const config = {
           stampDocumentUrl: "api/documentoperations/stampdocument",
           getDefaultCertificateInfoUrl: "api/documentoperations/getdefaultcertificateinfo",
           getDefaultCertificateInfoContentUrl: "api/documentoperations/getdefaultcertificateinfocontent",
+//========Documentpropertydefinitionoperations===========================================================================================================
           getDocumentPropertyDefinitionsUrl: "api/documentpropertydefinitionoperations/getdocumentpropertydefinitions/{documentStorageId}/{documentClassId}/{assigned}",
           assignDocumentPropertyDefinitionStorageToDocumentClassUrl: "api/documentpropertydefinitionoperations/assigndocumentpropertydefinitionstoragetodocumentClass",
           createOrUpdateDocumentPropertyDefinitionUrl: "api/documentpropertydefinitionoperations/createorupdatedocumentpropertydefinition",
           getDocumentPropertyDefinitionByIdUrl: "api/documentpropertydefinitionoperations/getdocumentpropertydefinitionbyid/{documentPropertyDefinitionId}",
           deleteDocumentPropertyDefinitionUrl: "api/documentpropertydefinitionoperations/deletedocumentpropertydefinition",
+//========Documentpropertyoperations==========================================================================================================
           setDocumentPropertyUrl: "api/documentpropertyoperations/setdocumentproperty",
           setDocumentPropertyAndUniversalLookupParamValueIdUrl: "api/documentpropertyoperations/setdocumentpropertyanduniversallookupparamvalueid",
           setDocumentPropertiesUrl: "api/documentpropertyoperations/setdocumentproperties",
           getDocumentPropertyUrl: "api/documentpropertyoperations/getdocumentproperty/{docId}",
           getDocumentPropertiesByUniversalLookupIdUrl: "api/documentpropertyoperations/getdocumentpropertiesbyuniversalLookupId",
+//========Eldaxapiinfo============================================================================================================
           getAllInfoControllersUrl: "api/eldaxapiinfo/getallinfocontrollers",
+//========Documentpropertydefinitionoperations===========================================================================================================
           sssignDocumentPropertyDefinitionStorageToDocumentClassUrl: "api/documentpropertydefinitionoperations/assigndocumentpropertydefinitionstoragetodocumentClass",
-          
+//========Isrsoperations===========================================================================================================          
           sendDocsToDSUrl: "api/isrsoperations/senddocstods",
           attachMoreDocsToDSUrl: "api/isrsoperations/attachmoredocstods",
           modificationItemISRSUrl: "api/isrsoperations/modificationitemisrs",
           deactivationItemISRSUrl: "api/isrsoperations/deactivationitemisrs",
-
+//========Packageoperations===========================================================================================
           createPackageUrl: "api/packageoperations/createpackage",
           getPackageContent: "api/packageoperations/getpackagecontent/{packageId}",
           checkSignatureInPackageContentUrl: "api/packageoperations/checksignatureinpackagecontent",
           checkDocumentClassIsForPackageUrl: "api/packageoperations/checkdocumentclassisforpackage/{classId}",
-
+//========Permissionoperations=============================================================================================
           getAllBOPermissionsUrl: "api/permissionoperations/getallbopermissions",
           getBOPermissionUrl: "api/permissionoperations/getbopermission/{appViewRight}",
           getPermissionsUrl: "api/permissionoperations/getpermissions/{storageId}",
@@ -119,24 +131,24 @@ export const config = {
           createOrUpdatePermissionUrl: "api/permissionoperations/getpermissionbyid/{permissionId}",
           deletePermissionUrl: "api/permissionoperations/deletepermission/{permissionId}",
           рasPermissionUrl: "api/permissionoperations/haspermission",
-
+//========Publicationoperations=============================================================================================
           getPublicationsUrl: "api/publicationoperations/createpublication",
           getLastPublicationNumberForUserUrl: "api/publicationoperations/getlastpublicationnumberforuser",
           updatePublicationUrl: "api/publicationoperations/updatepublication",
           getPublicationByIdUrl: "api/publicationoperations/getpublicationbyid/{publicationId}",
           deletePublicationUrl: "api/publicationoperations/deletepublication/{publicationId}",
-
+//========Shreddingactivationoperations=============================================================================================
           getShreddingActivationsUrl: "api/shreddingactivationoperations/getshreddingactivations",
           assignShreddingActivationStorageToDocumentClassUrl: "api/shreddingactivationoperations/assignshreddingactivationstoragetodocumentClass",
           updateShreddingActivationUrl: "api/shreddingactivationoperations/updateshreddingactivation",
           createShreddingActivationUrl: "api/shreddingactivationoperations/createshreddingactivation",
           getShreddingActivationByIdUrl: "api/shreddingactivationoperations/getshreddingactivationbyid/{shreddingActivationId}",
-
+//========Shreddingprocessoperations=============================================================================================
           getShreddingProcessesUrl: "api/shreddingprocessoperations/getshreddingprocesses",
           getFinishedShreddingProcessesByTimeIntervalUrl: "api/shreddingprocessoperations/getfinishedshreddingprocessesbytimeinterval",
           getShreddingProcessesByIdUrl: "api/shreddingprocessoperations/getshreddingprocessesbyid/{shreddingProcessId}",
           getShreddingProcessDocumentsUrl: "api/shreddingprocessoperations/getshreddingprocessdocuments/{shreddingProcessId}",
-
+//========Shreddingruleoperations=============================================================================================
           getShreddingRulesUrl: "api/shreddingruleoperations/getshreddingrules",
           getShreddingRuleByIdUrl: "api/shreddingruleoperations/getshreddingrulebyid/{shreddingRuleId}",
           getShreddingTypesUrl: "api/shreddingtype/getshreddingtypes",
@@ -147,7 +159,7 @@ export const config = {
           ppdateShreddingTypeUrl: "api/shreddingtype/updateshreddingtype",
           getShreddingTypeByIdUrl: "api/shreddingtype/getshreddingtypebyid/{id}",
           deleteShreddingTypeUrl: "api/shreddingtype/deleteshreddingtype/{shreddingTypeId}",
-
+//========Signcertificateoperations==============================================================================================
           getSignedCertificatesUrl: "api/signcertificateoperations/getsignedcertificates/{storageId}",
           getSignedCertificatesForDocumentClassUrl: "api/signcertificateoperations/getsignedcertificatesfordocumentslass/{storageId}/{documentClassId}",
           getSignedCertificateListByDocumentClassUrl: "api/signcertificateoperations/getsignedcertificatelistbydocumentclass/{documentClassId}",
@@ -161,11 +173,11 @@ export const config = {
           checkPermissionsUrl: "api/signcertificateoperations/checkpermissions/{storageId}",
           getHSMsUrl: "api/signcertificateoperations/gethsms/{storageId}",
           getHSMSignCertificatesUrl: "api/signcertificateoperations/gethsmsigncertificates",
-
+//========Sipoperations================================================================================================
           saveSIPUrl: "api/sipoperations/savesip",
           getNsCaseUrl: "api/sipoperations/getnscase/{documentID}",
           getNsDocumentUrl: "api/sipoperations/getnsdocument/{documentID}",
-
+//========Storageoperations===============================================================================================
           getStoragesUrl: "api/storageoperations/getstorages",
           searchStoragesUrl: "api/storageoperations/searchstorages",
           createStorageUrl: "api/storageoperations/createstorage",
@@ -175,7 +187,7 @@ export const config = {
           deleteStorageUrl: "api/storageoperations/deletestorage/{storageId}",
           getDeleteStorageInfoUrl: "api/storageoperations/getdeletestorageinfo/{storageId}",
           getStoragesByUserGroupIdUrl: "api/storageoperations/getstoragesbyusergroupid/{usergroupid}",
-
+//========Systemoperations===============================================================================================
           isContentConverterAvailableUrl: "api/systemoperations/iscontentconverteravailable/{conversiontype}",
           convertPDFToPDFAUrl: "api/systemoperations/convertpdftopdfa",
           getSettingsByCodeUrl: "api/systemoperations/getsettingsbycode/{code}",
@@ -188,9 +200,9 @@ export const config = {
           getCreditUrl: "api/systemoperations/getcredit",
           getCreditInfoByStorageUrl: "api/systemoperations/getcreditinfobystorage/{storageid}",
           automaticAccountValidityProlongationUrl: "api/systemoperations/automaticaccountvalidityprolongation",
-
+//========Timestampoperations==================================================================================================
           getDocumentValidationInfoUrl: "api/timestampoperations/getdocumentvalidationinfo/{documentGuid}",
-
+//========Tsaoperations=================================================================================================
           getTSAsUrl: "api/tsaoperations/gettsas",
           getTSAByIdUrl: "api/tsaoperations/gettsabyid/{id}",
           getTSAByClassIdUrl: "api/tsaoperations/gettsabyclassid/{classid}",
@@ -199,7 +211,7 @@ export const config = {
           requestTimeStampByDocumentHashUrl: "api/tsaoperations/requesttimestampbydocumenthash",
           uploadTSLCertificateUrl: "api/tslcertificatesadministrationoperations/uploadtslcertificate",
           getCertificateBySubjectKeyIdentificatorUrl: "api/tslcertificatesadministrationoperations/getcertificatebysubjectkeyidentificator/{subjectkeyidentificator}",
-
+//========Universallookupoperations====================================================================================================
           lookupCreateUrl: "api/universallookupoperations/lookupcreate",
           getLookupByIdUrl: "api/universallookupoperations/getlookupbyid/{lookupId}",
           updateLookupUrl: "api/universallookupoperations/updatelookup",
@@ -217,7 +229,7 @@ export const config = {
           getUniversalLookupPropertiesByParentUniversalLookupIdUrl: "api/universallookupoperations/getuniversallookuppropertiesbyparentUniversallookupId/{parentuniversallookupId}",
           getUniversalLookupByIdUrl: "api/universallookupoperations/getuniversallookupbyid/{parentuniversallookupid}",
           getDocumentPropertyValueUrl: "api/universallookupoperations/getdocumentpropertyvalue/{documentPropertyDefinitionId}/{universalLookupId}",
-
+//========Usergroupoperations=========================================================================================================
           getUserGroupsUrl: "api/usergroupoperations/getusergroups",
           getUserGroupsToSelectUrl: "api/usergroupoperations/getusergroupstoselect",
           getUserGroupsByStorageIdUrl: "api/usergroupoperations/getusergroupsbystorageid/{storageId}",
@@ -225,7 +237,7 @@ export const config = {
           getUserGroupByIdUrl: "api/usergroupoperations/getusergroupbyid/{userGroupId}",
           deleteUserGroupUrl: "api/usergroupoperations/deleteusergroup/{userGroupId}",
           GetUsersByUserGroupUrl: "api/usergroupoperations/getusersbyusergroup/{userGroupId}",
-
+//========Useroperations====================================================================================================
           authenticateexUrl: "api/useroperations/authenticateex",
           isAuthenticatedUrl: "api/useroperations/isauthenticated",
           userLogoutUrl: "api/useroperations/userlogout",

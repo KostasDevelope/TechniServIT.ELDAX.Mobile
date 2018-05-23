@@ -18,7 +18,7 @@ export class LoginPage {
   }
   Login() : void {
      
-     let message :string  = "User Name:"+ this.Username; 
+    let message :string  = "User Name:"+ this.Username; 
      
     let alert = this.alertCtrl.create({
       title: 'Low battery',
