@@ -48,5 +48,5 @@ export interface Document {
     IsVerificationDocument: boolean
     VersionHolder: object
     LastHashCheck: string;
-
 }
+export interface DocumentArray extends Array<Document>{}

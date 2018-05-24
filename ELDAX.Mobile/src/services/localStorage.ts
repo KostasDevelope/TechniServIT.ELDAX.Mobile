@@ -45,7 +45,7 @@ export class  EldaxLocalStorage {
       return await false;
     } 
   }
-  
+
   public Clear(callback?: Function) : void {
     this.localStorage.clear().subscribe(() => (result) =>{    
       if(callback !== null ) callback(result);
@@ -66,7 +66,7 @@ export class  EldaxLocalStorage {
     } 
   }
 
-  public GetItem<T>(key : string, callback?: Function) : void {
+  public GetItem<T>(key: string, callback?: Function) : void {
     this.localStorage.getItem<T>(key).subscribe((result) => {
       if(callback !== null ) callback(result);
     },
@@ -74,7 +74,7 @@ export class  EldaxLocalStorage {
     });
   }
 
-  public async GetItemAsync<T>(key : string) : Promise<T> {
+  public async GetItemAsync<T>(key: string) : Promise<T> {
     try 
     {
       let response = await this.localStorage.getItem<T>(key).toPromise();

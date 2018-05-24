@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Inject } from '@angular/core';
 import { ApiControllersInfo } from '../../services/apiControllersInfo'
 import { EldaxLocalStorage }  from '../../services/localStorage';
-import { ControllersInfo } from '../../interfaces/controllersInfo';
+import { ControllersInfo, ControllersInfoArray } from '../../interfaces/controllersInfo';
 
 @Component({
   selector: 'page-home',
@@ -33,7 +33,7 @@ export class HomePage {
         );
   }
 
-  public controllersInfos: Array<ControllersInfo> = new Array<ControllersInfo>(); 
+  public controllersInfos: ControllersInfoArray; 
   public clientVersion: string = "";
   public tapCounter: any = 0;
   

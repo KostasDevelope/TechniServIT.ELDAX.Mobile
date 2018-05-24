@@ -1,6 +1,3 @@
-<ion-tabs>
-  <ion-tab [root]="tabLogin" tabTitle="Login" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+<ion-tabs *ngIf="TabsPages">
+  <ion-tab *ngFor = "let tab of TabsPages;" [root]="tab.Root" [tabTitle] = "tab.TabTitle" [tabIcon] = "tab.TabIcon"></ion-tab>
 </ion-tabs>

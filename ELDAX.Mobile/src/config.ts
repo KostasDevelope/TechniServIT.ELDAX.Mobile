@@ -1,5 +1,7 @@
 export const config = {
      baseUrl: "http://localhost:3800/",
+     //baseUrl: "http://srvnt13-eldax:84/",
+     clientVersion: "1.0.2",
      urls: {
 //========BaseApi====================================================================       
           getClientVersion: "api/getclientversion",
@@ -260,5 +262,6 @@ export const config = {
           isUserSupervisorNoGroupUrl: "api/useroperations/isusersupervisornogroup",
           unlockUserUrl: "api/useroperations/unlockuser",
           setNewPasswordSendByEmailUrl: "api/useroperations/setnewpasswordsendbyemail"
+//============================================================================================================================
         }
 }
