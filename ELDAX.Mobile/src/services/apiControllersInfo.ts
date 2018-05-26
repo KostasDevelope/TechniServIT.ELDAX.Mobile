@@ -1,11 +1,9 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs/observable';
 import { ErrorHandler } from '@angular/core';
 import { config }  from '../config';
-import { ControllersInfo, ControllersInfoArray, ApiVersion} from './../interfaces/controllersInfo';
+import { ControllersInfoArray, ApiVersion} from './../interfaces/controllersInfo';
 import { String } from 'typescript-string-operations';
 
 @Injectable()

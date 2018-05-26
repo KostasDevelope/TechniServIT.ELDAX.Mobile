@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Camera, CameraOptions } from '@ionic-native/camera';
 import { LocalStorageModule } from '@ngx-pwa/local-storage';
 
 import { TabsPage } from '../pages/tabs/tabs';

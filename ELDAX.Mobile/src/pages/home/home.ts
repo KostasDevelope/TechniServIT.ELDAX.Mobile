@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Inject } from '@angular/core';
 import { ApiControllersInfo } from '../../services/apiControllersInfo'
 import { EldaxLocalStorage }  from '../../services/localStorage';
-import { ControllersInfo, ControllersInfoArray } from '../../interfaces/controllersInfo';
+import { ControllersInfoArray } from '../../interfaces/controllersInfo';
 
 @Component({
   selector: 'page-home',

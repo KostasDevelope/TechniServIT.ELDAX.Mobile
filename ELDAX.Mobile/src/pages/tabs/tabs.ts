@@ -1,9 +1,4 @@
-import { Component, ViewChild  } from '@angular/core';
-import { Tabs } from 'ionic-angular';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import { LoginPage } from '../login/login';
+import { Component } from '@angular/core';
 import { TabsPagesArray } from '../../interfaces/tabsPage';
 import { Pageges } from  '../pages'
 

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'loading-modal',
   templateUrl: 'loading-modal.html',
-  styles:['loading-modal.scss']
+  styleUrls:['loading-modal.scss']
 })
 export class LoadingModal {
   isBusy: boolean;

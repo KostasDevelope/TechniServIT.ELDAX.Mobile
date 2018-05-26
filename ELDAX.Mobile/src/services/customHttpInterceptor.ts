@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Location } from '@angular/common';
-import { Injectable } from '@angular/core';
 import { HttpInterceptor } from '@angular/common/http';
 import { HttpRequest } from '@angular/common/http';
 import { HttpHandler } from '@angular/common/http';
 import { HttpEvent } from '@angular/common/http';
-import { EldaxLocalStorage } from './localStorage';
 import { HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/observable/fromPromise';
  
 Component({
-  providers: [EldaxLocalStorage ]
+ 
 })
 export class CustomHttpInterceptor implements HttpInterceptor {
-  constructor(private eldaxLocalStorage: EldaxLocalStorage) {}
+  constructor() {}
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return Observable.fromPromise(this.handleAccess(request, next));
   }
