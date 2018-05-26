@@ -14,4 +14,9 @@ export interface ControllersInfo {
 }
 export interface ControllersInfoArray extends Array<ControllersInfo>{}
 
+export interface ApiVersion {
+    clientVersion: string;
+}
+
+
 

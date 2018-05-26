@@ -1,7 +1,12 @@
 export const config = {
      baseUrl: "http://localhost:3800/",
      //baseUrl: "http://srvnt13-eldax:84/",
+     //baseUrl: "https://212.47.6.57:14443/",
      clientVersion: "1.0.2",
+     IpAddress: "127.0.0.1",
+     keys:{
+        authenticationContext: "asuthenticationContext"
+      },
      urls: {
 //========BaseApi====================================================================       
           getClientVersion: "api/getclientversion",

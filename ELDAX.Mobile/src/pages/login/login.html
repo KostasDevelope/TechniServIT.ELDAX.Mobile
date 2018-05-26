@@ -1,7 +1,10 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Login ELDAX</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+      <ion-title>Login</ion-title>
+    </ion-navbar>  
 </ion-header>
 
 <ion-content padding>
@@ -19,6 +22,6 @@
     
   </ion-list>
   <div padding>
-    <button ion-button (click)="Login()">Login</button>
+    <button ion-button block (click)="Login()">Login</button>
   </div>
 </ion-content>

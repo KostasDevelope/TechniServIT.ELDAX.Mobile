@@ -22,7 +22,7 @@ export class HomePage {
   private setClientVersion(): void {
     this.apiControllersInfo.GetClientVersion()
         .then(result => 
-          this.clientVersion = result
+          this.clientVersion = result.clientVersion
         );
   }
 
