@@ -1,3 +1,4 @@
+import { NavParams } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { TabsPagesArray } from '../../interfaces/tabsPage';
 import { Pageges } from  '../pages'
@@ -8,8 +9,10 @@ import { Pageges } from  '../pages'
 })
 export class TabsPage {
   public TabsPages: TabsPagesArray;
-  constructor( Pageges: Pageges ) {
+  index: string;
+  constructor( Pageges: Pageges, public navParams: NavParams ) {
     this.TabsPages = Pageges.PageItems;
+    this.index = navParams.get('index');
   }
 }
 

@@ -13,22 +13,26 @@ export class Pageges {
       {
         Root: LoginPage,
         TabTitle: "Login",
-        TabIcon: "home"
+        TabIcon: "home",
+        Index: "0"
       },
       {
         Root: HomePage,
         TabTitle: "Home",
-        TabIcon: "home"
+        TabIcon: "home",
+        Index: "1"
       },
       {
         Root: AboutPage,
         TabTitle: "About",
-        TabIcon: "information-circle"
+        TabIcon: "information-circle",
+        Index: "2"
       },
       {
         Root: ContactPage,
         TabTitle: "Contact Eldax",
-        TabIcon: "contacts"
+        TabIcon: "contacts",
+        Index: "3"
       }
     ];
   }

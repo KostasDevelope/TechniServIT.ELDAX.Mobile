@@ -15,6 +15,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { DocumentsListPage } from '../pages/documents-list/documents-list';
 
+import { ComponentsModule} from '../components/components.module'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +31,8 @@ import { DocumentsListPage } from '../pages/documents-list/documents-list';
     BrowserModule,
     LocalStorageModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    ComponentsModule,
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

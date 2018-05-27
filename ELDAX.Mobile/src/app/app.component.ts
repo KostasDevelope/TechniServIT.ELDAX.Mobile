@@ -11,7 +11,7 @@ import { TabsPagesArray } from '../interfaces/tabsPage';
   providers: [ Pageges ]
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav) navCtrl: Nav;
   rootPage: any = TabsPage;
   menuPages: TabsPagesArray;
 
@@ -27,7 +27,7 @@ export class MyApp {
   }
 
   openPage(page) {
-    this.nav.setRoot(page.Root);
+    this.navCtrl.setRoot(page.Root, {index: page.Index});
   }
 
   openMenu() {

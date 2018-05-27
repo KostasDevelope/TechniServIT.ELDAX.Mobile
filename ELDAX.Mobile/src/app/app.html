@@ -1,12 +1,15 @@
 <ion-menu [content]="content" side="left">
-    <ion-content>
-      <ion-list *ngIf="menuPages">
-        <ion-item menuClose detail-none *ngFor="let p of menuPages">
-            <button menuClose (click)="openPage(p)" ion-button full color="danger">{{p.TabTitle}}</button>
-          </ion-item>
-        <ion-item menuClose detail-none>
-            <button menuClose ion-button full color="danger">Close Menu</button>
-        </ion-item>
+    <ion-header>
+    </ion-header>
+    <ion-content class="myBg">
+      <ion-list no-lines *ngIf="menuPages">
+        <button menuClose ion-item *ngFor="let p of menuPages" (click)="openPage(p)" color="background-color-grey">
+          <ion-icon item-left [name]="p.TabIcon" item-left color="light"></ion-icon>
+          {{p.TabTitle}}  
+         </button>
+         <button menuClose ion-item color="background-color-grey">
+            <ion-icon item-left item-left color="light"name="exit" ></ion-icon>Close Menu
+         </button>
       </ion-list>
     </ion-content>
   </ion-menu>

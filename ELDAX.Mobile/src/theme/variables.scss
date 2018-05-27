@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  clmain:     #3949ab,
+  background-color-grey: #878EA5
 );
 
 
@@ -86,3 +88,7 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+//===============Tabs===================================
+$tabs-md-tab-color-active: #283593;
+$tabs-ios-tab-color-active: #283593;
+$tabs-wp-tab-color-active: #283593;
