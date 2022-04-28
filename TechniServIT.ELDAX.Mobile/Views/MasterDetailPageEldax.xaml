@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="TechniServIT.ELDAX.Mobile.Views.MasterDetailPageEldax"
+                  x:Name="page"
+                  Title="Master Page"
+                  >
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                 IconImageSource="{OnPlatform iOS='hamburger.png'}"
+                 Padding="{OnPlatform Default='20', iOS='20,40'}">
+            <StackLayout>
+                <Label Text="Master Detail Demo"
+               FontSize="Large"
+               FontAttributes="Bold"
+               Margin="0,20"/>
+                <Button Text="Dashboard Page"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="DashboardPage" />
+
+                <Button Text="Settings Page"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="SettingsPage" />
+
+                <Button Text="RadMap Page"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="RadMapPage" />
+
+                <Button Text="Monkey Page"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="MonkeyPage" />
+
+                <Button Text="Login Page"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="LoginPage" />
+                
+                <StackLayout Orientation="Horizontal">
+                    <Switch IsToggled="{Binding IsPresentedAfterNavigation,Source={x:Reference page}}" />
+                    <Label Text="Is Presented After Navigation" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+   
+
+</MasterDetailPage>

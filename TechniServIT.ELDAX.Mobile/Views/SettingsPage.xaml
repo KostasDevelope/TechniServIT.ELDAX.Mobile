@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TechniServIT.ELDAX.Mobile.Views.SettingsPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <telerikBarcode:RadBarcode x:Name="barcode" 
+                       Value="{Binding BarcodeValue}"
+                       WidthRequest="300" HeightRequest="300">
+            <telerikBarcode:RadBarcode.Symbology>
+                <telerikBarcode:QRCode SizingMode="Stretch" />
+            </telerikBarcode:RadBarcode.Symbology>
+        </telerikBarcode:RadBarcode>
+    </StackLayout>
+</ContentPage>

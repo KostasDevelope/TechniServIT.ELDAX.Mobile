@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TechniServIT.ELDAX.Mobile.Views.DashboardPage"
+             Title="{Binding Title}"
+             Padding="5">
+    <ContentPage.Content>
+       
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100*" />
+                    <RowDefinition Height="100*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <telerikInput:RadButton
+                x:Name="button"
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Click me!"
+                BorderThickness="2"
+                BorderColor="#4488F6"
+                Command="{Binding ShowCommand}" />
+
+                <telerikChart:RadPieChart
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    <telerikChart:RadPieChart.Series>
+                        <telerikChart:PieSeries ShowLabels="True"
+                                RadiusFactor="0.8"
+                                ValueBinding="Value"
+                                ItemsSource="{Binding Data}" />
+                    </telerikChart:RadPieChart.Series>
+                </telerikChart:RadPieChart>
+
+                <telerikChart:RadCartesianChart
+                    Grid.Row="2"
+                    Grid.Column="0">
+                    <telerikChart:RadCartesianChart.HorizontalAxis>
+                        <telerikChart:CategoricalAxis LabelFitMode="MultiLine" />
+                    </telerikChart:RadCartesianChart.HorizontalAxis>
+                    <telerikChart:RadCartesianChart.VerticalAxis>
+                        <telerikChart:NumericalAxis LabelFitMode="MultiLine" />
+                    </telerikChart:RadCartesianChart.VerticalAxis>
+                    <telerikChart:RadCartesianChart.Series>
+                        <telerikChart:BarSeries ValueBinding="Value"
+                                        CategoryBinding="Category"
+                                        ItemsSource="{Binding Data}" />
+                    </telerikChart:RadCartesianChart.Series>
+                </telerikChart:RadCartesianChart>
+            </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
