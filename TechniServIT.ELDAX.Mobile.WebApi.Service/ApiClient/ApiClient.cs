@@ -305,8 +305,7 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.ApiClient
             }
             catch (FlurlHttpException ex)
             {
-                result.Status = ex.Call.Response?.StatusCode;
-                result.Message = await ex.GetResponseStringAsync();
+                await result.GetErrorMessage(ex);
             }
             return result;
         }
