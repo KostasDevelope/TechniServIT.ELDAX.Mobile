@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Net;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
 {
@@ -40,7 +41,14 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
             {
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
-
+                    using (var objResponseStream = httpResponse.GetResponseStream())
+                    {
+                        using (var objXMLReader = new XmlTextReader(objResponseStream))
+                        {
+                            var xmldoc = new XmlDocument();
+                            xmldoc.Load(objXMLReader);
+                        }
+                    }
                 }
             }
 
