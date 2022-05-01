@@ -1,5 +1,4 @@
-﻿using Prism.Modularity;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace TechniServIT.ELDAX.Mobile.Views
 {
