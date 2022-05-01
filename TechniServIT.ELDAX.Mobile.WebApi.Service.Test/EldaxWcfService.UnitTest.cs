@@ -10,7 +10,7 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
     public class EldaxWcfServiceUnitTest
     {
 
-       
+
         private HttpWebRequest _eldaxService;
         private string _urlWcf = "https://localhost:8003/ELDAX/Service";
 
@@ -59,14 +59,14 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
                         }
                     }
                 }
-            } 
-            catch(Exception exp)
+            }
+            catch (Exception exp)
             {
 
             }
         }
 
-      
+
         private string SetValuesToXmlDocument()
         {
             var result = string.Empty;
@@ -106,7 +106,7 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
             return document.InnerXml;
         }
 
-        
+
 
     }
 }
