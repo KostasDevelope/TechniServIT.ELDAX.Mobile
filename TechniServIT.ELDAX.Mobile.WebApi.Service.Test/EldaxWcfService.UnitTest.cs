@@ -12,7 +12,7 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
 
 
         private HttpWebRequest _eldaxService;
-        private string _urlWcf = "https://localhost:8003/ELDAX/Service.svc/";
+        private string _urlWcf = "https://localhost:8003/ELDAX/Service.svc/AuthenticateEx";
 
 
         [SetUp]
@@ -65,20 +65,6 @@ namespace TechniServIT.ELDAX.Mobile.WebApi.Service.Test
             {
 
             }
-        }
-
-        private string GetXmlDocument()
-        {
-            var result = string.Empty;
-            var documentXml = new XmlDocument();
-            documentXml.LoadXml(ELDAXServiceRequests.AuthenticateEx);
-            var nsmgr = new XmlNamespaceManager(documentXml.NameTable);
-            nsmgr.AddNamespace("soapenv", "http://schemas.xmlsoap.org/soap/envelope/");
-            nsmgr.AddNamespace("tec", "https://www.techniserv-it.cz");
-            nsmgr.AddNamespace("tec1", "http://schemas.datacontract.org/2004/07/TechniServIT.ELDAX.Service.ProxyClasses");
-            var applicationLogin = documentXml.SelectSingleNode("//tec:AuthenticateEx/tec:ctx/tec1:ApplicationLogin", nsmgr);
-            applicationLogin.InnerText = "sa";
-            return documentXml.InnerXml;
         }
 
         private string SetValuesToXmlDocument()
