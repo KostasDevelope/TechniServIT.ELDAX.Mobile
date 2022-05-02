@@ -18,4 +18,19 @@
     <ProjectReference Include="..\TechniServIT.ELDAX.Mobile.WebApi.Service\TechniServIT.ELDAX.Mobile.WebApi.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="ELDAXServiceRequests.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ELDAXServiceRequests.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ELDAXServiceRequests.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ELDAXServiceRequests.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
