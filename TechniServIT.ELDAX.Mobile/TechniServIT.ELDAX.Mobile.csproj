@@ -34,10 +34,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resources\DashboardPageResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DashboardPageResource.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\LoginPageResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>LoginPageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\MasterDetailPageEldaxResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MasterDetailPageEldaxResource.resx</DependentUpon>
     </Compile>
     <Compile Update="Views\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
@@ -48,9 +58,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\DashboardPageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashboardPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\LoginPageResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LoginPageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\MasterDetailPageEldaxResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MasterDetailPageEldaxResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

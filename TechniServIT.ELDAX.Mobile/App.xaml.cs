@@ -42,3 +42,5 @@ namespace TechniServIT.ELDAX.Mobile
         }
     }
 }
+
+//  xmlns:local="clr-namespace:TechniServIT.ELDAX.Mobile.Extensions"

@@ -117,50 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AuthenticateEx" xml:space="preserve">
-    <value>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tec="https://www.techniserv-it.cz" xmlns:tec1="http://schemas.datacontract.org/2004/07/TechniServIT.ELDAX.Service.ProxyClasses"&gt;
-   &lt;soapenv:Header/&gt;
-   &lt;soapenv:Body&gt;
-      &lt;tec:AuthenticateEx&gt;
-         &lt;!--Optional:--&gt;
-         &lt;tec:ctx&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:ApplicationLogin&gt;?&lt;/tec1:ApplicationLogin&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:AuthenticationMessage&gt;?&lt;/tec1:AuthenticationMessage&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:AuthenticationType&gt;?&lt;/tec1:AuthenticationType&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:AuthenticationURL&gt;?&lt;/tec1:AuthenticationURL&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:ClientVersion&gt;?&lt;/tec1:ClientVersion&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:CultureCode&gt;?&lt;/tec1:CultureCode&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:EntityId&gt;?&lt;/tec1:EntityId&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:HashedData&gt;?&lt;/tec1:HashedData&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:IPAddress&gt;?&lt;/tec1:IPAddress&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:InstanceName&gt;?&lt;/tec1:InstanceName&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:IsLockedOut&gt;?&lt;/tec1:IsLockedOut&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:IsTokenValid&gt;?&lt;/tec1:IsTokenValid&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:Password&gt;?&lt;/tec1:Password&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:TimeZoneId&gt;?&lt;/tec1:TimeZoneId&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:Token&gt;?&lt;/tec1:Token&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:TwoFactorAuthentication&gt;?&lt;/tec1:TwoFactorAuthentication&gt;
-            &lt;!--Optional:--&gt;
-            &lt;tec1:UserLogin&gt;?&lt;/tec1:UserLogin&gt;
-         &lt;/tec:ctx&gt;
-      &lt;/tec:AuthenticateEx&gt;
-   &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;</value>
+  <data name="DashboardPage" xml:space="preserve">
+    <value>Dashboard Page</value>
+  </data>
+  <data name="IsPresentedAfterNavigation" xml:space="preserve">
+    <value>Is Presented After Navigation</value>
+  </data>
+  <data name="LoginPage" xml:space="preserve">
+    <value>Login Page</value>
+  </data>
+  <data name="MasterDetailDemo" xml:space="preserve">
+    <value>Master Detail Demo</value>
+  </data>
+  <data name="MasterPage" xml:space="preserve">
+    <value>Master Page</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MonkeyPage" xml:space="preserve">
+    <value>Monkey Page</value>
+  </data>
+  <data name="RadMapPage" xml:space="preserve">
+    <value>RadMap Page</value>
+  </data>
+  <data name="SettingsPage" xml:space="preserve">
+    <value>Settings Page</value>
   </data>
 </root>
